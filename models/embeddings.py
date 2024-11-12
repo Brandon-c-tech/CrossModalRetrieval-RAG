@@ -98,6 +98,8 @@ class TextbookMarkdownLoader(BaseDocumentLoader):
 
         # 生成当前时间戳
         timestamp = datetime.now().isoformat()
+        # 生成UUID
+        document_id = str(uuid4())
 
         return Document(
             page_content=item['content'],
@@ -107,7 +109,8 @@ class TextbookMarkdownLoader(BaseDocumentLoader):
                 "section": item.get("section"),
                 "subsection": item.get("subsection"),
                 "subject": item.get("subject"),
-                "timestamp": timestamp
+                "timestamp": timestamp,
+                "id": document_id
             }
         )
     
@@ -232,12 +235,16 @@ class ImageDescriptionLoader(BaseDocumentLoader):
         
         # 生成当前时间戳
         timestamp = datetime.now().isoformat()
-        
+        # 生成UUID
+        document_id = str(uuid4())
+
         return Document(
             page_content=content,
             metadata={
+                "source": "image",
                 "image_name": image_name,
-                "timestamp": timestamp
+                "timestamp": timestamp,
+                "id": document_id
             }
         )
     
