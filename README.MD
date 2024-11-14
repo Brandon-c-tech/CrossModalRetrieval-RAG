@@ -1,5 +1,9 @@
 # CrossModalRetrieval-RAG
 
+**Most of the content in this project is still AI-generated placeholders, and currently only embbeding.py and processors.py in the models directory are meaningful. Other features will be gradually improved and completed.**
+
+**本项目大多数内容还是AI生成的placeholder，目前只有models里的embbeding.py和processors.py是有意义的。其他功能会陆续完善。**
+
 <div align="center">
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
